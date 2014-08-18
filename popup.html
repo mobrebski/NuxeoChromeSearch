@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Extend Web Search to Nuxeo DAM</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/jqui-base/jquery.ui.all.css" />
+		<link rel="stylesheet" type="text/css" href="css/popup.css" />
+
+		<link type="text/css" rel="stylesheet" href="css/simplePagination.css"/>
+		
+
+		<!--
+			- JavaScript and HTML must be in separate files: see our Content Security
+			- Policy documentation[1] for details and explanation.
+			- [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+		 -->
+		<script src="scripts/3d-party/jquery-2.0.0.min.js"></script>
+		<script src="scripts/3d-party/jqueryui-1.10.3.min.js"></script>
+		<script src="scripts/nuxeo/nuxeo.js"></script>
+		<script src="scripts/utils.js"></script>
+		<script src="scripts/nuxeo-utils.js"></script>
+		
+		<script type="text/javascript" src="scripts/jquery.simplePagination.js"></script>
+		
+		<script src="popup.js"></script>
+	</head>
+	
+	<body class="popup">
+
+			<div id="top_section">
+				<div id="paginator" class="pagination-holder clearfix" style="display: inline-block; width:80%"> </div>
+				<div id="option_link"><a id="options_link" href="options.html">Options</a></div>
+			</div>
+			
+			<div id="displayResults">
+				<div id="waiting">
+					<img src="images/big_loading.gif" class="center" />
+				</div>
+				<div id="connectionError" class="connectionError doHide">
+					Cannot connect to Nuxeo server.
+					Check server settings in extension Options.
+				</div>
+			</div>		
+			
+	</body>
+</html>
+

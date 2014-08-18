@@ -1,0 +1,38 @@
+{
+	"manifest_version": 2,
+	"name": "Nuxeo Integrated Search Extension",
+	"version": "1.1.1",
+	
+	"description": "Integrates searching a Nuxeo repository by keyword, into the Chrome search bar.",
+	"icons": {	"16"  : "images/nuxeo-16.png",
+				"48"  : "images/nuxeo-48.png",
+				"128" : "images/nuxeo-128.png" },
+	"homepage_url": "http://www.nuxeo.com",
+	
+	"options_page": "options.html",
+	
+	"page_action": {
+		"default_icon": {
+			"19": "images/nuxeo-19.png",
+			"38": "images/nuxeo-38.png"
+		},
+		"default_title": "Extend Google search to your Nuxeo application",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"persistent" : false,
+		"scripts": ["scripts/utils.js",
+					"scripts/nuxeo-utils.js",
+					"scripts/nuxeo/nuxeo.js",
+					"scripts/background/background-main.js"]
+	},
+	"permissions": [
+		"storage",
+		"tabs",
+		"notifications",
+		"http://*/*",
+		"https://*/*"
+	],
+	
+	"minimum_chrome_version": "12"
+}

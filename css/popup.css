@@ -1,0 +1,221 @@
+/* popup.css
+*/
+
+/**************************************************
+ Main, general elements
+ *************************************************/
+ 
+body {
+	background: white; /*#f6f6f6;*/
+	color: rgb(68, 68, 68);
+	font-family: 'Lucida Grande', Arial, Helvetica, Geneva, sans-serif;
+
+	font-size: 14px;
+	line-height: 1.5;
+
+}
+
+label {
+	font-size: 14px;
+}
+
+body.popup {
+	-webkit-user-select: none;
+	margin: 0px;
+}
+
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.thumbnailContainer {
+	display:inline-block;
+	position: relative;
+	
+	margin: 10px;
+	margin-bottom: 5px;
+	
+	border: 1px solid LightGray;
+	width: 128px;
+	height: 128px;
+		
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+.nuxeoThumbnail {
+	vertical-align: middle;
+	max-width: 120px;
+	max-height: 120px;
+	margin-top: 2px;
+}
+
+
+.thumbnailLabel {
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	
+	width: 128px;
+	bottom: 0px;
+	
+	font-size: 10px;
+	text-align: center;
+	
+	color: black;
+}
+
+#option_link {
+	display: inline;
+	float: right;
+	font-size: smaller;
+}
+
+#top_section {
+	border: none;
+	padding: 10px;
+	padding-bottom: 0px;
+}
+
+#displayResults {
+	min-width: 465px;
+	padding: 10px;
+	padding-top: 0px;
+}
+
+#resultLabel {
+	font-family: 'Lucida Grande', Arial, Helvetica, Geneva, sans-serif;
+	font-size: 12px;
+	color: black;
+	text-align:left;
+	margin: 0px
+}
+
+/**************************************************
+ Utility classes
+ *************************************************/
+.doHide {
+	display:none;
+}
+
+.doShow {
+	display:block;
+}
+
+
+
+/**************************************************
+ Main form (nuxeo url/login/pwd/enable-disable
+ *************************************************/
+
+
+.bigError {
+	min-width: 300px;
+	font-size: 18px;
+	padding: 20px 20px 20px 20px;
+	/* Make it super flashy */
+	color:red;
+	background-color:yellow;
+}
+
+.connectionError {
+	font-size: 18px;
+	padding: 20px 20px 20px 20px;
+	/* Make it super flashy */
+	color:red;
+	background-color:yellow;
+	vertical-align: top;
+
+	display: block;
+	min-width: 400px;
+}
+
+/*********
+Options Page
+*********/
+/*#askParams {
+	margin: 1px;
+	-webkit-border-radius: 2px;
+	background: #f2f5f6;
+	padding: 15px;
+}*/
+
+#connectionInfos {
+	margin-top= 0px;
+	margin-left= 0px;
+	margin-bottom= 0px;
+	margin-right= 0px;
+
+	padding-top= 0px;
+	padding-left= 0px;
+	padding-bottom= 0px;
+	padding-right= 0px;
+
+}
+
+#popupForm input[type=text],
+#popupForm input[type=password] {
+	min-width: 300px;
+	width: 300px;
+	-webkit-border-radius: 4px;
+	border: 3px solid
+	-webkit-box-shadow: 0px 1px 0px white;
+	padding: 6px;
+	font-size: 14px;
+}
+
+.popupSubmitBlock {
+	text-align:center;
+}
+
+.popupFieldBlock, .checkboxBlock {
+	margin-left: 26px;
+	padding-right:50px;
+}
+
+.popupButton {
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 8px 20px 8px 20px;
+	margin-top: 10px;
+}
+
+.popupButton:hover {
+	cursor: pointer;
+}
+
+.popupFieldBlock label {
+	display: block;
+	padding-left: 3px;
+	margin-top: 12px;
+}
+
+
+/*   Not needed 
+
+.enableCheckboxBlock {
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+
+.disabled {
+	color: darkGray;
+}
+
+.checkboxBlock {
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+*/
