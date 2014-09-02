@@ -81,6 +81,7 @@
  *
  * Contributors:
  *     Thibaud Arguillere (Nuxeo)
+ *     Mike Obrebski (Nuxeo)
  * ----------------------------------------------------------------------
  * ----------------------------------------------------------------------
  */
@@ -231,7 +232,8 @@ function displayResults(inResults) {
 		kwLabel = gKeywords.replace(" ", ", ");
 		has2KwAtLeast = kwLabel.indexOf(" ") > 0;
 	}
-	_jqResults.append("<p id='resultLabel'>" + inResults.resultsCount + " Results for \""+ kwLabel + "\"</p>")
+	_jqResults.append("<p id='resultLabel'>" + inResults.resultsCount + " Results for \""+ kwLabel + "\"</p>");
+	 
 	
 	// To just add basic div/img, let's use standard DOM APIs instead of jQuery
 	dispRes = document.getElementById("displayResults");
@@ -312,6 +314,7 @@ function getNuxeoDocURL(inDoc) {
 	return UTILS_NUXEO.nuxeoHost + "/nxpath/default" + inDoc.path + "@view_documents?mainTabId=MAIN_TABS";
 }
 
+/*
 function formatResultTitle(inResults) {
 	// jQuery UI has added a span for the accordion arrow. Lets not remove it.
 	var title = _jqResultTitle.children()[0].outerHTML;
@@ -326,6 +329,7 @@ function formatResultTitle(inResults) {
 	}
 	_jqResultTitle.html(title);
 }
+*/
 
  /* Callback called by nuxeo.js
   *
@@ -370,7 +374,7 @@ function runTheQuery(inKeywords) {
   		// We found in our testing that sometime the default
   		// timeout was not enough. This is mainly because we
   		// also tested on poor hardware :->
-  		timeout: 12000
+  		timeout: 6000
 	});
 
 	// We want the file schema to build some urls
